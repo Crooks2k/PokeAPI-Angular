@@ -12,6 +12,10 @@ import { PokemonComponent } from './pokemon/pokemon/pokemon.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    HomeComponent,
+    PokemonComponent
   ]
 })
 export class PagesModule { }
