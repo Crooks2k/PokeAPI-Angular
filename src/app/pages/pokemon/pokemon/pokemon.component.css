@@ -1,0 +1,45 @@
+.card{
+  width: 290px;
+  height: 400px;
+  background-color: #333976;
+  padding-top: 3rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+#cardLogo{
+  position: absolute;
+  width: 250px;
+  top: -80px;
+  left: 18px;
+}
+.cardHead{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 100%;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  border: 2px solid black;
+}
+#CardNameImg{
+  position: absolute;
+  left: 0;
+  top: 120px;
+  width: 140px;
+}
+#CardPokemonName{
+  position: absolute;
+  font-size: 21px;
+  left: 15px;
+  top: 128px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.cardBody{
+  background-color: #E7E7E7;
+  width: 100%;
+  height: 290px;
+  margin-top: 1.4rem;
+}

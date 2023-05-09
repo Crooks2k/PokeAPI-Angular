@@ -1,11 +1,16 @@
 export interface Pokemon{
+  id: number,
   name: string,
+  image: string,
   type: string,
   hp: number,
   attack: number,
   defense: number,
   speed: number,
   ability: string,
-  gender: string,
-  level: number,
+  sprites: Sprites
+}
+
+interface Sprites{
+  front_default: string,
 }

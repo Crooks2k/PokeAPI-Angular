@@ -6,6 +6,9 @@
   </form>
 </main>
 
-<section>
-  <app-pokemon></app-pokemon>
+<section *ngIf="pokemons" class="Pokemon-cards">
+  <app-pokemon [pokemon]="pokemon" *ngFor="let pokemon of pokemons"></app-pokemon>
+</section>
+<section *ngIf="!pokemons">
+  <p>Loading Pokemons</p>
 </section>

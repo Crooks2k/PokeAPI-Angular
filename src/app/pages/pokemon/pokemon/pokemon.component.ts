@@ -7,4 +7,9 @@ import { Pokemon } from 'src/app/shared/models/pokemon.model';
   styleUrls: ['./pokemon.component.css']
 })
 export class PokemonComponent {
+
+  @Input() pokemon!: Pokemon
+
+  PokemonLogoCard = "/assets/images/pokemonLogo.svg"
+  FiguraCardName = "/assets/images/FiguraCardName.svg"
 }
