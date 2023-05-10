@@ -2,15 +2,29 @@ export interface Pokemon{
   id: number,
   name: string,
   image: string,
-  type: string,
+  types: types[],
   hp: number,
   attack: number,
   defense: number,
   speed: number,
-  ability: string,
-  sprites: Sprites
+  abilities: abilities[],
+  sprites: Sprites,
+  weight: number
 }
 
 interface Sprites{
   front_default: string,
+}
+
+interface abilities{
+  ability: {
+    name: string,
+    url: string
+  }
+}
+
+interface types{
+  type:{
+    name: string,
+  }
 }
