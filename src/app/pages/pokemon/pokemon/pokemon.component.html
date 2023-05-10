@@ -6,6 +6,20 @@
   <img src="{{FiguraCardName}}" id="CardNameImg">
   <p id="CardPokemonName">{{pokemon.name}}</p>
   <div class="cardBody">
+    <h3>Habilidades</h3>
+    <div id="habilidades">
+      <p *ngFor="let habilidad of pokemon.abilities"> {{habilidad.ability.name}}</p>
+    </div>
 
+    <h3 id="tipos">Tipos</h3>
+    <div id="types">
+      <p *ngFor="let tipos of pokemon.types"> {{tipos.type.name}}</p>
+    </div>
+
+    <h3 id="peso">Weight</h3>
+    <div id="pesos">
+      <p> {{pokemon.weight}}</p>
+    </div>
   </div>
+  <img src="{{Pokebola}}" id="cardPokebola">
 </div>

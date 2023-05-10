@@ -12,4 +12,5 @@ export class PokemonComponent {
 
   PokemonLogoCard = "/assets/images/pokemonLogo.svg"
   FiguraCardName = "/assets/images/FiguraCardName.svg"
+  Pokebola = "/assets/images/pokebal.png"
 }

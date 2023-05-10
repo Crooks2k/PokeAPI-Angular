@@ -1,11 +1,18 @@
 .card{
   width: 290px;
-  height: 400px;
+  height: 300px;
   background-color: #333976;
   padding-top: 3rem;
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
+  border-radius: 25px 25px 25px 25px;
+  transition: all .6s;
 }
+.card:hover{
+  transform: scale(1.1) rotateX(-25deg) rotateY(-7deg);
+  transition: all .6s;
+}
+
 #cardLogo{
   position: absolute;
   width: 250px;
@@ -22,12 +29,14 @@
   height: 90px;
   margin: 0 auto;
   border: 2px solid black;
+  box-shadow: 3px 10px 20px 0px rgba(161, 161, 161, 0.75);
 }
 #CardNameImg{
   position: absolute;
   left: 0;
-  top: 120px;
+  top: 118px;
   width: 140px;
+
 }
 #CardPokemonName{
   position: absolute;
@@ -36,10 +45,39 @@
   top: 128px;
   color: #FFFFFF;
   font-weight: bold;
+  text-transform: capitalize;
 }
 .cardBody{
   background-color: #E7E7E7;
   width: 100%;
-  height: 290px;
+  height: 210px;
   margin-top: 1.4rem;
+  padding-top: 1rem;
+  text-align: center;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 6px 10px 15px 0px rgba(143, 143, 143, 0.75);
+}
+h3{
+  color: #444444;
+  font-weight: bold;
+}
+#habilidades, #types, #pesos{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: -1.8rem;
+  font-size: 17px;
+  color: #dd5a5a;
+  text-transform: capitalize;
+}
+#tipos, #peso{
+  margin-top: -0.5rem;
+}
+#cardPokebola{
+  position: absolute;
+  width: 45px;
+  bottom: -60px;
+  right: -15px;
+  transform: rotate(15deg);
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, inject} from '@angular/core';
+import { Component} from '@angular/core';
 import { PokemonService } from 'src/app/core/services/pokemon.service';
 import { PokemonList } from 'src/app/shared/models/pokemonList.model';
 import { Pokemon } from 'src/app/shared/models/pokemon.model';
@@ -20,7 +20,6 @@ export class HomeComponent {
 
   constructor(private pokemonService: PokemonService){
   }
-  
   pokemonList!: PokemonList
   pokemons: Pokemon[] = []
 
@@ -30,7 +29,7 @@ export class HomeComponent {
       this.pokemonService.getAllPokemonDetails(this.pokemonList).subscribe((response) => {
         //almacenamiento de cada uno de los pokemones
         this.pokemons = response
-        console.log(this.pokemons)
+        // console.log(this.pokemons)
       });
     });
   }

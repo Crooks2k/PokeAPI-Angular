@@ -5,7 +5,6 @@ import { PokemonComponent } from './pokemon/pokemon/pokemon.component';
 import { HttpClientModule } from "@angular/common/http"
 
 
-
 @NgModule({
   declarations: [
     HomeComponent,
