@@ -2,13 +2,13 @@
   <img src="{{home_contain.baner}}" alt="{{home_contain.alt}}">
   <form>
     <i class="fa-solid fa-magnifying-glass" style="font-size: 16px; color: #77777B;"></i>
-    <input type="text" placeholder="{{home_contain.form.placeHolder}}" style="font-size: 16px;"/>
+    <input type="text" (input)="pokemon__onChange($event)" value="{{inputValue}}" placeholder="{{home_contain.form.placeHolder}}" style="font-size: 16px;"/>
   </form>
 </main>
 
-<section *ngIf="pokemons" class="Pokemon-cards">
-  <app-pokemon [pokemon]="pokemon" *ngFor="let pokemon of pokemons"></app-pokemon>
+<section *ngIf="filteredPokemons" class="Pokemon-cards">
+  <app-pokemon [pokemon]="pokemon" *ngFor="let pokemon of filteredPokemons"></app-pokemon>
 </section>
-<section *ngIf="!pokemons">
+<section *ngIf="filteredPokemons">
   <p>Loading Pokemons</p>
 </section>

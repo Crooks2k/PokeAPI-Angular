@@ -2,6 +2,7 @@ import { Component} from '@angular/core';
 import { PokemonService } from 'src/app/core/services/pokemon.service';
 import { PokemonList } from 'src/app/shared/models/pokemonList.model';
 import { Pokemon } from 'src/app/shared/models/pokemon.model';
+import { Target } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
@@ -20,17 +21,32 @@ export class HomeComponent {
 
   constructor(private pokemonService: PokemonService){
   }
-  pokemonList!: PokemonList
-  pokemons: Pokemon[] = []
+  pokemonList!: PokemonList;
+  originalPokemons: Pokemon[] = []
+  filteredPokemons: Pokemon[] = []
+  inputValue: string = ""
 
-  ngOnInit(): void{
-    this.pokemonService.getPokemonList().subscribe((data) =>{
+  ngOnInit(): void {
+    this.pokemonService.getPokemonList().subscribe((data) => {
       this.pokemonList = data
       this.pokemonService.getAllPokemonDetails(this.pokemonList).subscribe((response) => {
-        //almacenamiento de cada uno de los pokemones
-        this.pokemons = response
-        // console.log(this.pokemons)
-      });
-    });
+        this.originalPokemons = response
+        this.filteredPokemons = response
+      })
+    })
+  }
+
+  //filter pokemons and display filter
+  pokemon__onChange = (event: any) => {
+    event.preventDefault()
+    this.inputValue = event.target.value.toLowerCase()
+
+    if (this.inputValue === "") {
+      this.filteredPokemons = this.originalPokemons
+    } else {
+      this.filteredPokemons = this.originalPokemons.filter((pokemon) =>
+        pokemon.name.toLowerCase().includes(this.inputValue)
+      )
+    }
   }
 }
