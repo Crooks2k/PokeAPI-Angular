@@ -10,7 +10,7 @@ export class PokemonComponent {
 
   @Input() pokemon!: Pokemon
 
-  PokemonLogoCard = "/assets/images/pokemonLogo.svg"
-  FiguraCardName = "/assets/images/FiguraCardName.svg"
+  PokemonLogoCard = "/assets/images/pokemonLogo.png"
+  FiguraCardName = "/assets/images/FiguraCardName.png"
   Pokebola = "/assets/images/pokebal.png"
 }

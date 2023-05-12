@@ -12,7 +12,7 @@ import { Target } from '@angular/compiler';
 export class HomeComponent {
 
   home_contain = {
-    baner: "/assets/images/Banner.svg",
+    baner: "/assets/images/Banner.png",
     alt: "Baner pokemon",
     form: {
       placeHolder: "Pikachu, Charizard, Ratata..."
