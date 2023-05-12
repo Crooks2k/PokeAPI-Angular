@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './layouts/header/header/header.component';
-import { HttpClientModule } from "@angular/common/http"
-import { PokemonService } from './services/pokemon.service';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
