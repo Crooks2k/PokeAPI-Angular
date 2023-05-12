@@ -5,6 +5,7 @@ import { PokemonComponent } from './pokemon/pokemon/pokemon.component';
 import { HttpClientModule } from "@angular/common/http"
 import { NgxPaginationModule } from 'ngx-pagination';
 import { LoaderComponent } from '../core/common/Loader/loader/loader.component';
+import { FooterComponent } from '../core/layouts/footer/footer/footer.component';
 
 
 
@@ -12,7 +13,8 @@ import { LoaderComponent } from '../core/common/Loader/loader/loader.component';
   declarations: [
     HomeComponent,
     PokemonComponent,
-    LoaderComponent
+    LoaderComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { LoaderComponent } from '../core/common/Loader/loader/loader.component';
   exports: [
     HomeComponent,
     PokemonComponent,
-    LoaderComponent
+    LoaderComponent,
+    FooterComponent
   ]
 })
 export class PagesModule { }

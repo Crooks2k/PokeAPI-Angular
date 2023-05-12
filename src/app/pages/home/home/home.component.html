@@ -14,5 +14,6 @@
   <app-loader></app-loader>
 </section>
 
-<pagination-controls (pageChange)="currentPage = $event" class="paginacion"></pagination-controls>
-
+<div *ngIf="filteredPokemons">
+  <pagination-controls (pageChange)="currentPage = $event" class="paginacion"></pagination-controls>
+</div>
