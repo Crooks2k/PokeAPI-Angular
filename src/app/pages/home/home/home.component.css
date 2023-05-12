@@ -70,3 +70,8 @@ main > form input:placeholder-shown{
   gap: 2rem;
   padding: 0 7rem;
 }
+
+.paginacion{
+  display: flex;
+  justify-content: center;
+}

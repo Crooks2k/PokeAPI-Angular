@@ -7,8 +7,12 @@
 </main>
 
 <section *ngIf="filteredPokemons" class="Pokemon-cards">
-  <app-pokemon [pokemon]="pokemon" *ngFor="let pokemon of filteredPokemons"></app-pokemon>
+  <app-pokemon [pokemon]="pokemon" *ngFor="let pokemon of filteredPokemons | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage}"></app-pokemon>
 </section>
-<section *ngIf="filteredPokemons">
-  <p>Loading Pokemons</p>
+
+<section *ngIf="filteredPokemons.length == 0">
+  <app-loader></app-loader>
 </section>
+
+<pagination-controls (pageChange)="currentPage = $event" class="paginacion"></pagination-controls>
+

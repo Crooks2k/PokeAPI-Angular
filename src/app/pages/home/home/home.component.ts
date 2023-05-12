@@ -21,10 +21,17 @@ export class HomeComponent {
 
   constructor(private pokemonService: PokemonService){
   }
+
+  //pokemon
   pokemonList!: PokemonList;
   originalPokemons: Pokemon[] = []
   filteredPokemons: Pokemon[] = []
   inputValue: string = ""
+
+  //pagination config
+  itemsPerPage: number = 6;
+  currentPage: number = 1;
+
 
   ngOnInit(): void {
     this.pokemonService.getPokemonList().subscribe((data) => {
