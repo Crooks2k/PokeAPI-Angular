@@ -1,27 +1,25 @@
-# MyApp
+# PokeAPI V1.0
+![image](https://github.com/Crooks2k/PokeAPI-Angular/assets/97590572/e2f7fe4c-ea05-4423-843d-7f2761725452)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+En este proyecto se realizo una pokeAPI que contiene datos de diferentes sagas de pokemon, puedes visualizar el despliegue <a href="https://poke-api-angular-six.vercel.app/">aqui</a>
 
-## Development server
+El proyecto fue creado con [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Version Oficial V1.0
 
-## Code scaffolding
+- Se agregaron `500 peticiones` que se manejan simultaneamente como observables y se pasan a un ForkJOIN para realizar una sola petición y realizar el fetching.
+- Se implemento una `barra de busqueda` en su primera version para filtrar los pokemones.
+- Se implemento una `paginación de NGX` para evitar el scroll masivo y optimizar el rendimiento de la aplicación.
+- Se implemento un `Loader` para mostrar mientras se efectuan los fetching de datos.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Clonación del codigo
 
-## Build
+Para usar el codigo de manera local clona el repositorio y usa en tu terminal el comando `ng serve` para abrir un servidor local en `http://localhost:4200/`. La aplicación se recargara automaticamente si efectuas un cambio en los archivos.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Autor
 
-## Running unit tests
+- <a href="https://github.com/Crooks2k/">@Crooks2k</a>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Licencia
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- MIT
